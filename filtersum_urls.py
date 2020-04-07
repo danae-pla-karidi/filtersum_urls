@@ -4,10 +4,10 @@ the total number of occurrences of every record in the file with
 urls and stores them in 'output.csv'
 
 """
-
 import sys
 import csv 
 import collections
+
 set_urls = set(line.strip() for line in open(sys.argv[1]))
 set_expanded = set(line.strip() for line in open(sys.argv[2]))
 set_inter = set_expanded.intersection(set_urls) 
@@ -30,4 +30,3 @@ for min in lineu:
 dataset.close()
 fp.close()
 read_urls.close()
-
